@@ -1774,6 +1774,10 @@ footer {
   -moz-transform: rotateZ(360deg);
   -o-transform: rotateZ(360deg);
   -ms-transform: rotateZ(360deg);
+  -webkit-transform: rotateZ(360deg);
+  -moz-transform: rotateZ(360deg);
+  -o-transform: rotateZ(360deg);
+  -ms-transform: rotateZ(360deg);
   transform: rotateZ(360deg);
 }
 @media only screen and (min-width: 768px) {
