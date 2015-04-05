@@ -25,9 +25,9 @@
 
 </head>
 
-  <body>
-    <header>
-      <div>
+    <body>
+      <header>
+        <div>
 		
 			<div id="imglogo">
 				<a href="/"><img src="/img/logo.svg" alt="Wakasann" title="Wakasann"/></a>
@@ -67,103 +67,22 @@
 			</nav>			
 </div>
 
-    </header>
-    
+      </header>
+      <div id="container">
+          
+<div class="archive-title" >
+<h2 class="category-icon">分类</h2>
 
-    <div id="container">
-      <div id="main" class="或categories" itemscope itemprop="blogPost">
-	<article itemprop="articleBody"> 
-		<header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/categories/index.html" title="categories" itemprop="url">categories</a>
-  </h1>
-  <p class="article-author">By
-    
-      <a href="http://wakasann.github.io" title="wakasann">wakasann</a>
-    </p>
-  <p class="article-time">
-    <time datetime="2015-03-19T13:38:33.000Z" itemprop="datePublished">3月 19 2015</time>
-    更新日期:<time datetime="2015-03-19T13:38:33.000Z" itemprop="dateModified">3月 19 2015</time>
-    
-  </p>
-</header>
-
-	<div class="article-content">
-		
-		
-		  
-	</div>
-		<footer class="article-footer clearfix">
-
-
-
-
-<div class="article-share" id="share">
-
-  <div data-url="http://wakasann.github.io/categories/index.html" data-title="categories | Wakasann" data-tsina="null" class="share clearfix">
-  </div>
+<a data-src="/categories/日志/" href="#日志" title="日志">日志<sup>8</sup></a>
 
 </div>
-</footer>   	       
-	</article>
-	
-	
-<section class="comment">
-	<div class="ds-thread"></div>
-</section>
-
-</div>  
-      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
-
-<div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
-<aside class="clearfix">
-
-  
-
-  
-<div class="tagslist">
-	<p class="asidetitle">标签</p>
-		<ul class="clearfix">
-		
-			<li><a href="/tags/daliy/" title="daliy">daliy<sup>1</sup></a></li>
-		
-			<li><a href="/tags/life/" title="life">life<sup>6</sup></a></li>
-		
-		</ul>
+<div id="main" class="archive-part">
+<div class="all-list-box"></div>
 </div>
 
 
-</aside>
-</div>
-    </div>
-    <footer><div id="footer" >
-	
-	<div class="line">
-		<span></span>
-		<div class="author"></div>
-	</div>
-	
-	
-	<div class="social-font" class="clearfix">
-		
-		<a href="http://weibo.com/1691481064" target="_blank" title="weibo"></a>
-		
-		
-		
-		<a href="https://github.com/wakasann" target="_blank" title="github"></a>
-		
-		
-	</div>
-		<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wizicer/iceman" target="_blank" title="Iceman">Iceman</a> © 2015 
-		
-		<a href="http://wakasann.github.io" target="_blank" title="wakasann">wakasann</a>
-		
-		</p>
-</div>
-</footer>
-    <script src="/js/jquery-2.1.0.min.js"></script>
+      </div>
+      <script src="/js/jquery-2.1.0.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){ 
   $('.navbar').click(function(){
@@ -212,12 +131,30 @@ $(document).ready(function(){
 
 
 
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var list    = $('.archive-title a'),
+      box     = $('.all-list-box'),
+      first   = $('.archive-title a:first-of-type');
+      box.load(first.attr('data-src').toString()+' #archive-page');
+      first.addClass('current');
+  list.each(function(){
+    $(this).click(function(){
+      var listSrc=$(this).attr('data-src').toString()+' #archive-page';
+      box.load(listSrc);
+      list.removeClass('current');
+      $(this).addClass('current');
+     });  
+    });
+  }); 
+</script>
 
 
 
 
 
 
-  </body>
- </html>
+
+    </body>
+   </html>
 
